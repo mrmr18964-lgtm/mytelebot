@@ -32,8 +32,8 @@ Telegram uchun to'liq AI bot — ko'p model, vision, voice, RAG, premium, anti-s
 
 ### 1. Loyihani klonlash
 ```bash
-git clone https://github.com/yourusername/super-ai-bot
-cd super-ai-bot
+git clone https://github.com/mrmr18964-lgtm/mytelebot
+cd mytelebot
 ```
 
 ### 2. Virtual muhit
@@ -80,7 +80,7 @@ python bot.py
 git init
 git add .
 git commit -m "Initial commit"
-git remote add origin https://github.com/yourusername/super-ai-bot.git
+git remote add origin https://github.com/mrmr18964-lgtm/mytelebot.git
 git push -u origin main
 ```
 
@@ -95,7 +95,7 @@ git push -u origin main
    - `OPENAI_API_KEY`
    - `GROQ_API_KEY`
    - `ADMIN_IDS`
-   - `WEBHOOK_URL` = `https://your-app-name.onrender.com`
+   - `WEBHOOK_URL` = `https://mytelebot.onrender.com`
 
 5. **Deploy** tugmasini bosing
 
@@ -103,7 +103,7 @@ git push -u origin main
 
 ### Muhim: Persistent Disk
 SQLite bazasi saqlanishi uchun Render da **Disk** qo'shing:
-- Mount path: `/opt/render/project/src`
+- Mount path: `/opt/render/project/src/data`
 - Size: 1 GB (bepul reja uchun)
 
 ---
@@ -115,7 +115,7 @@ SQLite bazasi saqlanishi uchun Render da **Disk** qo'shing:
 **GitHub Pages:**
 ```bash
 # webapp/ papkasini alohida repo yoki gh-pages branch ga
-# URL: https://yourusername.github.io/bot-webapp/
+# URL: https://mrmr18964-lgtm.github.io/bot-webapp/
 ```
 
 **Vercel:**

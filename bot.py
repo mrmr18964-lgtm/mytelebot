@@ -106,7 +106,7 @@ ADMIN_IDS: list[int] = (
 )
 
 # ── Konstantalar ───────────────────────────────────────────────────
-DB_PATH          = "bot_history.db"
+DB_PATH          = os.getenv("DB_PATH", "bot_history.db")
 MAX_HISTORY      = 20
 CHUNK_SIZE       = 800
 CHUNK_OVERLAP    = 100
