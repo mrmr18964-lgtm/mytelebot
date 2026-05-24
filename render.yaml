@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: super-ai-bot
+    runtime: python
+    region: frankfurt          # Yaqin region
+    plan: free                 # free / starter / standard
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    healthCheckPath: /health
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false            # Render Dashboard dan qo'lda kiritiladi
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: ADMIN_GEMINI_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: ADMIN_IDS
+        sync: false
+      - key: WEBHOOK_URL
+        sync: false            # https://your-app-name.onrender.com
+      - key: BOT_WEBAPP_URL
+        sync: false            # ixtiyoriy
+      - key: PORT
+        value: "8443"
+      - key: PYTHON_VERSION
+        value: "3.11.0"
+    disk:
+      name: bot-data
+      mountPath: /opt/render/project/src
+      sizeGB: 1                # SQLite fayli uchun persistent disk
